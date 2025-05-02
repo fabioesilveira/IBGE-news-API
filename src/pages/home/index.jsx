@@ -1,6 +1,8 @@
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
+import Button from 'react-bootstrap/Button';
+import Card from 'react-bootstrap/Card';
 
 function Home() {
 
@@ -43,12 +45,15 @@ function Home() {
             <button onClick={handleClick}>Search</button>
 
             {data.map((e, i) => (
-                <div onClick={() => handleNavigate(e.produto_id)}>
-                    <h2>{e.titulo}</h2>
-                    <p>{e.introducao}</p>
-                    <a href={e.link} target="_blank" rel="noopener noreferrer">More infos</a>
-                </div>
+                <Card onClick={() => handleNavigate(e.produto_id)}>
+                    <Card.Img variant="top" src="holder.js/100px180" />
+                    <Card.Title>{e.titulo}</Card.Title>
+                    <Card.Text>{e.introducao}</Card.Text>
+                    <Button href={e.link} target="_blank" rel="noopener noreferrer">More infos</Button>
+                </Card>
+                
             ))}
+            
         </div>
     )
 }
