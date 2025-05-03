@@ -3,12 +3,13 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
+import IMG from "../assets/ibge.webp";
 
 function Home() {
 
     const [data, setData] = useState([])
     const [search, setSearch] = useState("")
-    const navigate = useNavigate ()
+    const navigate = useNavigate()
     const params = useParams()
 
 
@@ -23,8 +24,8 @@ function Home() {
     }, [])
 
     function handleChange(event) {
-      const value = event.target.value
-      setSearch(value)
+        const value = event.target.value
+        setSearch(value)
     }
 
     function handleClick() {
@@ -39,21 +40,24 @@ function Home() {
 
     return (
         <div>
+<div className="div-input-btn">
+            <input className="input-home" placeholder="filtre materia" type="text" value={search} onChange={handleChange} />
 
-            <input type="text" value={search} onChange={handleChange} />
+            <Button onClick={handleClick}>Search</Button>
 
-            <button onClick={handleClick}>Search</button>
+            </div>
+            <div className="div-map">
+                {data.map((e, i) => (
+                    <div className="div-card">
+                        <Card onClick={() => handleNavigate(e.produto_id)}>
+                            <Card.Title className="card-title">{e.titulo}</Card.Title>
+                            <Card.Text className="card-text">{e.introducao}</Card.Text>
+                            <Button className="btn-card" href={e.link} target="_blank" rel="noopener noreferrer">Abrir Materia Completa no site IBGE</Button>
+                        </Card>
+                    </div>
 
-            {data.map((e, i) => (
-                <Card onClick={() => handleNavigate(e.produto_id)}>
-                    <Card.Img variant="top" src="holder.js/100px180" />
-                    <Card.Title>{e.titulo}</Card.Title>
-                    <Card.Text>{e.introducao}</Card.Text>
-                    <Button href={e.link} target="_blank" rel="noopener noreferrer">More infos</Button>
-                </Card>
-                
-            ))}
-            
+                ))}
+            </div>
         </div>
     )
 }

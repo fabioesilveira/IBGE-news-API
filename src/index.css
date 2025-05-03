@@ -1,0 +1,41 @@
+.div-card {
+    width: 700px;
+    align-items: center;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.card-title {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.card-text {
+    text-align: center;
+}
+
+.btn-card {
+    width: 300px;
+    margin-bottom: 5px;
+    margin-left: 30%;
+}
+
+.div-map {
+    margin-top: 50px;
+    height: auto;
+    margin-left: 30%;
+    width: 100%;
+}
+
+.div-input-btn {
+    height: 90px;
+    width: 100%;
+}
+
+.input-home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
