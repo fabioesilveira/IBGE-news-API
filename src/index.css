@@ -1,3 +1,8 @@
+.div-page {
+    width: 100%;
+    height: auto;
+}
+
 .div-card {
     width: 700px;
     align-items: center;
@@ -24,18 +29,16 @@
 
 .div-map {
     margin-top: 50px;
-    height: auto;
-    margin-left: 30%;
-    width: 100%;
+    display: grid;  /* alinha os itens um embaixo do outro */
+    justify-content: center;
 }
 
 .div-input-btn {
-    height: 90px;
-    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .input-home {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 400px;
 }

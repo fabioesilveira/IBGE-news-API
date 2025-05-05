@@ -39,11 +39,12 @@ function Home() {
 
 
     return (
-        <div>
-<div className="div-input-btn">
-            <input className="input-home" placeholder="filtre materia" type="text" value={search} onChange={handleChange} />
+        <div className="div-page">
+            <img src={IMG} alt="Description of the image" />
+            <div className="div-input-btn">
+                <input className="input-home" placeholder="filtre por materia" type="text" value={search} onChange={handleChange} />
 
-            <Button onClick={handleClick}>Search</Button>
+                <Button onClick={handleClick}>Procurar</Button>
 
             </div>
             <div className="div-map">
