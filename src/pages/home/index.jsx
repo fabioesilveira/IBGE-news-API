@@ -3,7 +3,7 @@ import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Button from 'react-bootstrap/Button';
 import Card from 'react-bootstrap/Card';
-import IMG from "../assets/ibge.webp";
+
 
 function Home() {
 
@@ -40,7 +40,7 @@ function Home() {
 
     return (
         <div className="div-page">
-            <img src={IMG} alt="Description of the image" />
+            
             <div className="div-input-btn">
                 <input className="input-home" placeholder="filtre por materia" type="text" value={search} onChange={handleChange} />
 

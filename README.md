@@ -1,13 +1,24 @@
-# React + Vite
+# IBGE-NEWS-API
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Description
 
-Currently, two official plugins are available:
+IBGE-NEWS-API is a project that integrates the official IBGE API to display news articles in a user-friendly interface. Users can navigate through the page and, if desired, click the link button attached to each news item to access the full article directly on the IBGE website. The application also features a search input at the top of the page, allowing users to filter news based on keywords.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Technologies used
+
+CSS, Bootstrap, React.Js. API end Point https://servicodados.ibge.gov.br/api/v3/noticias/
+
+## Credits
+
+Project By Fabio Silveira.
+
+## Deployed Site
+
+![Screenshot of Deployed Website](src/assets/Screenshot1.png)
+
+![Screenshot of Deployed Website]()
+
+![Screenshot of Deployed Website]()
 
 
-//TODO: rotas dinamicas para cada elemento,
-
-2 botoes 1 next e outro previous
+[Live Demo Link]()
